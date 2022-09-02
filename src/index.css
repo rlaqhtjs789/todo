@@ -1,3 +1,9 @@
+/* 초기화 CSS */
+*{margin: 0; padding: 0; border: 0;}
+input:focus{
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #3F5DF0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App{width: 300px; height: 500px; overflow: hidden; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 5px;}
+/* 초기화 CSS */
+
+
+/* Header CSS */
+.header{width: 100%; height: 15%; border-bottom: 1px solid #f7f7f7; background: #f9f9f9; display: flex; align-items: center; justify-content: center;} 
+.header .contents{width: 100%; padding: 0 16px; box-sizing: border-box;}
+.header .contents div{display: flex; justify-content: space-between;}
+.header .contents .dateBox{margin-bottom: 10px;}
+.header .contents .dateBox>div{font-size: 18px; color: #3F5DF0;}
+.header .contents .dateBox>div>span{font-weight: bold; display: inline-block; margin-right: 4px;}
+.header .contents .dateBox>p{font-size: 12px; font-size: 11px; display: flex; align-items: end; color: gray;}
+.header .contents .deleteBox{align-items: center;}
+.header .contents .deleteBox>span{font-size: 13px; color: gray;}
+.header .contents .deleteBox>#delete{padding: 5px 10px; background: orangered; color: #fff; font-size: 11px; border-radius: 5px; cursor: pointer;}
+/* Header CSS */
+
+
+/* 입력창 CSS */
+.App form{width: 100%; height: 9%; border-bottom: 1px solid #f9f9f9; display: flex; align-items: center; padding: 0 16px; box-sizing: border-box;}
+.App form>button{background: none; display: flex; align-items: center; cursor: pointer;}
+.App form>input{margin-left: 10px; width: 80%; font-size: 16px;}
+/* 입력창 CSS */
+
+
+/* List CSS */
+.App ul{width: 100%; height: 78%; overflow-y: scroll;}
+.App ul>li{width: 100%; padding: 15px 16px; box-sizing: border-box; display: flex; align-items: center;}
+.App ul>li>label{width: 83%; height: 100%; cursor: pointer; display: flex; align-items: center;}
+.App ul>li>label>span{width: 80%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; font-size: 14px;}
+.App ul>li>label.active>span{text-decoration: line-through;}
+.App ul>li>label>div{display: flex; align-items: center; margin-right: 8px;}
+.App ul>li>label>input{display: none;}
+.App ul>li>p{font-size: 11px; white-space: nowrap; display: inline-block; color: #ccc;}
+/* List CSS */
+
